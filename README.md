@@ -1,54 +1,101 @@
-# React + TypeScript + Vite
+# 🔐 Password Strength Meter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern **Password Strength Meter** built with **Vite**, **React**, **TypeScript**, and **Tailwind CSS**.  
+It provides real-time feedback on password strength, helping users create more secure passwords.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ✅ Real-time password strength evaluation
+- ✅ Visual strength indicator (weak / medium / strong / very strong)
+- ✅ Detailed feedback on password criteria (length, symbols, numbers, uppercase, etc.)
+- ✅ Responsive and accessible UI with Tailwind CSS
+- ✅ Lightweight and blazing fast build with Vite
 
-## Expanding the ESLint configuration
+## 📸 Demo
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+![Password Strength Meter Demo](./screenshot.png)
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+_(Optional: Add a live link if deployed, e.g., [Live Demo](https://your-demo-url.com))_
+
+## 🛠️ Tech Stack
+
+- [Vite](https://vitejs.dev/) – Fast development build tool
+- [React](https://reactjs.org/) – UI library
+- [TypeScript](https://www.typescriptlang.org/) – Type-safe JavaScript
+- [Tailwind CSS](https://tailwindcss.com/) – Utility-first CSS framework
+
+## 📦 Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/password-strength-meter.git
+
+# Navigate to the project folder
+cd password-strength-meter
+
+# Install dependencies
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 💻 Usage
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+# Start the development server
+npm run dev
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+# Build for production
+npm run build
+
+# Preview the production build
+npm run preview
 ```
+
+Then open your browser at: [http://localhost:5173](http://localhost:5173)
+
+## 🔧 Available Scripts
+
+- `npm run dev` → Start local development server
+- `npm run build` → Build the app for production
+- `npm run preview` → Preview the production build
+
+## 📁 Project Structure
+
+```
+src/
+├── components/        # Reusable components (e.g., PasswordStrengthMeter)
+├── hooks/            # Custom hooks (if any)
+├── utils/            # Utility functions
+├── App.tsx          # Main app component
+├── index.tsx        # Entry point
+└── index.css        # Tailwind CSS imports
+```
+
+## 🧪 How It Works
+
+- Uses regex and scoring algorithms to analyze the entered password.
+- Displays visual feedback:
+
+  - Weak (🔴), Medium (🟠), Strong (🟢), Very Strong (💚)
+
+- Provides text hints to improve password strength.
+
+## ✨ Customization
+
+You can easily customize:
+
+- Strength levels and thresholds
+- Color schemes (via Tailwind classes)
+- Feedback messages
+
+## 📄 License
+
+This project is licensed under the [MIT License](./LICENSE).
+
+## 🙌 Acknowledgments
+
+- Inspired by password strength libraries like [zxcvbn](https://github.com/dropbox/zxcvbn)
+- Tailwind for fast styling
+
+---
+
+⭐ **Feel free to fork, star, or contribute!**
